@@ -31,6 +31,6 @@ theme = ["PaperMod"]
   category = "categories"
   tag = "tags"
 
-  [author]
+[author]
   name = "coder"  # Tutaj wpisz swoje imię lub nick
   email = "cod@er.com" # Opcjonalnie, ale RSS często tego wymaga
