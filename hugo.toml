@@ -1,6 +1,7 @@
 baseURL = "https://bgracz.github.io/"
 title = "_techguy"
 theme = ["PaperMod"]
+disableKinds = ["RSS"]
 
 [params]
   defaultTheme = "dark"
