@@ -1,0 +1,32 @@
+baseURL = "https://bgracz.github.io/"
+title = "_techguy"
+theme = ["PaperMod"]
+
+[params]
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  disableThemeToggle = true
+  paginate = 7
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About me"
+    url = "/about/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

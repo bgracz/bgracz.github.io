@@ -1,0 +1,24 @@
+# --- Hugo: Folder wyjściowy (tu trafia zbudowana strona) ---
+public/
+
+# --- Hugo: Pliki tymczasowe i cache ---
+resources/_gen/
+.hugo_build.lock
+
+# --- Pliki wygenerowane, które widzę w Twoim katalogu głównym ---
+# (Nie powinny być w repozytorium źródłowym, bo są nadpisywane przy buildzie)
+index.html
+index.xml
+sitemap.xml
+404.html
+
+# --- Systemowe (macOS) ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Edytory kodu ---
+.vscode/
+.idea/

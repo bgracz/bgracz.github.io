@@ -1,0 +1,22 @@
+{{- /* Pobieramy adres URL obrazka */ -}}
+{{- $url := urls.Parse .Destination -}}
+
+{{- /* Ustawienia domyślne */ -}}
+{{- $width := "100%" -}}
+{{- $centered := false -}}
+
+{{- /* Sprawdzamy "fragmenty" URL (to co po #) */ -}}
+{{- if $url.Fragment -}}
+    {{- /* Jeśli jest #50, ustawiamy szerokość na 50% */ -}}
+    {{- if in $url.Fragment "50" -}} {{- $width = "50%" -}} {{- end -}}
+    {{- /* Jeśli jest #center, włączamy centrowanie */ -}}
+    {{- if in $url.Fragment "center" -}} {{- $centered = true -}} {{- end -}}
+{{- end -}}
+
+{{- /* Generujemy finalny kod HTML */ -}}
+<div style="{{ if $centered }}text-align: center;{{ end }} margin: 1em 0;">
+    <img src="{{ .Destination | safeURL }}" 
+         alt="{{ .Text }}" 
+         {{- /* TUTAJ DODALIŚMY ZAOKRĄGLENIE: border-radius: 8px; */ -}}
+         style="width: {{ $width }}; height: auto; border-radius: 8px; display: {{ if $centered }}inline-block{{ else }}block{{ end }};" />
+</div>

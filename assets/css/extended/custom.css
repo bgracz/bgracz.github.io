@@ -1,0 +1,88 @@
+/* =========================================
+   1. IMPORT CZCIONEK (ROBOTO - TECH VIBE)
+   ========================================= */
+/* Importujemy Roboto (tekst) i Roboto Mono (kod) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* =========================================
+   2. KOLORY I ZMIENNE
+   ========================================= */
+:root {
+    --theme: #1d1e20 !important;   /* Ciemne tło strony */
+    --entry: #1d1e20 !important;   /* Tło posta (transparentne) */
+    --primary: #e6e6e6 !important; /* Jasny, czytelny tekst */
+    --secondary: #a9a9b3 !important; /* Szary tekst dodatkowy (daty, stopki) */
+    --code-bg: #2d2d30 !important; /* Tło dla bloków kodu */
+}
+
+/* =========================================
+   3. GLOBALNY RESET I FONTY
+   ========================================= */
+body, .main, .list, .content {
+    background-color: var(--theme) !important;
+    color: var(--primary) !important;
+    font-family: 'Roboto', sans-serif !important; /* Główna czcionka */
+}
+
+/* =========================================
+   4. UKŁAD POSTÓW (BEZPUDEŁKOWY)
+   ========================================= */
+.post-entry {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important; /* Marginesy załatwia 'gap' w .main */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px !important; /* Jeden, konkretny odstęp między artykułami */
+}
+
+/* =========================================
+   5. TYPOGRAFIA I CZYTELNOŚĆ
+   ========================================= */
+.post-content, 
+.article-content {
+    font-size: 1rem !important; /* Zwiększamy do standardu 16px */
+    line-height: 1.75;          /* Większy oddech między liniami */
+    font-weight: 300;           /* Wersja Light wygląda nowocześnie na ciemnym */
+    color: var(--primary) !important;
+}
+
+.post-content p {
+    text-align: left !important; /* ZMIANA: Lewostronne wyrównanie jest czytelniejsze */
+    margin-bottom: 1.5em !important;
+}
+
+/* Nagłówki */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary) !important;
+    font-weight: 500 !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Linki w tekście (żeby było widać, że to linki) */
+.post-content a, .article-content a {
+    color: var(--primary) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: #666; /* Subtelne podkreślenie */
+    transition: all 0.2s ease;
+}
+
+.post-content a:hover {
+    text-decoration-color: var(--primary);
+    background-color: rgba(255,255,255,0.1); /* Lekkie podświetlenie po najechaniu */
+}
+
+/* =========================================
+   6. BLOKI KODU (DLA BLOGA TECH)
+   ========================================= */
+code {
+    font-family: 'Roboto Mono', monospace !important;
+}
