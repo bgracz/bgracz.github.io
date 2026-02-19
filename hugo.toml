@@ -1,13 +1,14 @@
 baseURL = "https://bgracz.github.io/"
 title = "_techguy"
 theme = ["PaperMod"]
-disableKinds = ["RSS"]
+languageCode = "en-us"  # Warto dodać dla SEO
 
 [params]
   defaultTheme = "dark"
   ShowReadingTime = true
   disableThemeToggle = true
   paginate = 7
+  author = "B"
 
 [menu]
   [[menu.main]]
@@ -32,6 +33,7 @@ disableKinds = ["RSS"]
   category = "categories"
   tag = "tags"
 
+# To jest kluczowe dla RSS i metadanych
 [author]
-  name = "coder"  # Tutaj wpisz swoje imię lub nick
-  email = "cod@er.com" # Opcjonalnie, ale RSS często tego wymaga
+  name = "B"
+  email = "cod@er.com"
